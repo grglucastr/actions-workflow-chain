@@ -10,10 +10,7 @@ on:
 
   # Manual trigger from the UI
   workflow_dispatch:
-    inputs:
-      message:
-        description: 'Build description'
-
+  
   # Dependency to a forking workflow
   workflow_run:
     workflows: ["First workflow to run"]
