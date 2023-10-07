@@ -13,12 +13,14 @@ jobs:
         run: echo "Hi from first workflow to run!"
 
   say_hello:
+    needs: say_hi
     runs-on: ubuntu-latest
     steps:
       - name: Hello
         run: echo "Hello from first workflow to run!"
   
   say_goodbye:
+    needs: say_hello
     runs-on: ubuntu-latest
     steps:
       - name: Goodbye
