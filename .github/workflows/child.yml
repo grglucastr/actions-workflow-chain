@@ -1,0 +1,28 @@
+name: Second workflow to run
+
+on:
+  # Automatic trigger when pushing tags
+  # push:
+  #   branches:
+  #     - "!*"
+  #   tags:
+  #     - 'v*'
+
+  # Manual trigger from the UI
+  workflow_dispatch:
+    inputs:
+      message:
+        description: 'Build description'
+
+  # Dependency to a forking workflow
+  workflow_run:
+    workflows: ["Fork production builds"]
+    type:
+      - complete
+
+jobs:
+  say_hi_from_child:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hi from child
+        run: echo "Hi from second workflow. I depend on the first workflow to complete."
