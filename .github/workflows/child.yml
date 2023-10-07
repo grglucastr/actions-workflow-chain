@@ -10,12 +10,6 @@ on:
 
   # Manual trigger from the UI
   workflow_dispatch:
-  
-  # Dependency to a forking workflow
-  workflow_run:
-    workflows: ["First workflow to run"]
-    type:
-      - complete
 
 jobs:
   say_hi_from_child:
