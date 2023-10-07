@@ -11,3 +11,15 @@ jobs:
     steps:
       - name: Hi
         run: echo "Hi from first workflow to run!"
+
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello
+        run: echo "Hello from first workflow to run!"
+  
+  say_goodbye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Goodbye
+        run: echo "Goodbye, see ya!"
