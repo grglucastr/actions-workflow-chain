@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hi
-        run: echo "Hi from first workflow to run"
+        run: echo "Hi from first workflow to run!"
