@@ -13,6 +13,13 @@ on:
     inputs:
       message:
         description: 'Build description'
+  
+  workflow_run:
+    workflows:
+      - "First workflow to run"
+    types:
+      - "completed"
+      - "requested"
 
 jobs:
   say_hi_from_child:
