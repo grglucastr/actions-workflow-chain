@@ -16,7 +16,7 @@ on:
 
   # Dependency to a forking workflow
   workflow_run:
-    workflows: ["Fork production builds"]
+    workflows: ["First workflow to run"]
     type:
       - complete
 
