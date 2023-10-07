@@ -1,7 +1,9 @@
 name: First workflow to run
 
 on:
-  workflow_dispatch
+  push:
+    branches:
+      - "master"
 
 jobs:
   say_hi:
